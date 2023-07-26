@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1</title>
+</head>
+
+<body>
+    <h1></h1>
+
+    <script>
+        const h1 = document.querySelector("h1")
+
+        // let inputSaldo = Number(prompt("Masukan Saldo Anda"))
+        // alert(`Saldo anda berjumlah Rp.${inputSaldo}`)
+        // const utang = Number(prompt("Masukan utang anda"))
+        // const saldoAkhir = inputSaldo - utang
+        // alert(`Saldo akhir anda berjumlah ${saldoAkhir}`)
+
+        let date = new Date().getDay()
+        const clock = new Date().getUTCDate()
+        const years = new Date().getFullYear()
+        let month = new Date().getMonth()
+        let semuaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu",]
+        const semuaBulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Desember"]
+
+
+        // for (let date = 7; date > semuaHari.length; date = 0) {
+
+        // }
+        // console.log(date)
+
+        date = semuaHari[date]
+        month = semuaBulan[month]
+
+        h1.innerHTML = `${date}, ${clock} ${month} ${years}`
+
+        // clock
+        let now = new Date()
+        let hours = now.getHours()
+
+        let minutes = now.getMinutes()
+        if (minutes <= 9) {
+            minutes = `0${minutes}`
+        }
+        let seconds = now.getSeconds()
+        if (seconds <= 9) {
+            seconds = `0${seconds}`
+        }
+        console.log(hours)
+        console.log(minutes)
+        console.log(seconds)
+
+
+    </script>
+</body>
+
+</html>

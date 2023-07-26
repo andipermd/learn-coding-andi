@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1 class="h1"></h1>
+
+<body>
+
+
+    <script>
+        // penggunaan if else, opearator logika &&
+        // operator logika && kondisi harus true, hasilnya akan true. jika salah satu false , maka akan false
+        // 
+
+
+        const h1 = document.querySelector('.h1')
+
+        // PROGRAM KODE MASUK
+        // const kodeMasuk = "andi"
+        // const security = prompt("masukan kode anda")
+        // if (security == kodeMasuk) {
+        //     alert('kamu berhasil masuk')
+        // } else {
+        //     question()
+        // }
+
+        // function question() {
+        //     const again = prompt(" KODE YANG ANDA MASUKAN SALAH HARAP MASUKAN KEMBALI !!")
+        //     if (again != kodeMasuk) return question()
+        // }
+
+        // // function question() {
+        // //     const askAgain = prompt("masukan kode anda dengan benar !!")
+        // //     switch (askAgain) {
+        // //         case askAgain == kodeMasuk:
+        // //             alert('selamat anda berhasil masuk')
+        // //             break;
+        // //         case askAgain != kodeMasuk:
+        // //             alert('kode anda salah')
+        // //         default:
+        // //             question()
+        // //     }
+        // // }
+
+        // h1.innerHTML = `Hello , ${kodeMasuk} mau makan apa hari ini ? `
+
+
+        alert('berikut merupakan program untuk menginput data nama mahasiwa dan nilai nya...')
+
+        let inputDataName = prompt("masukan nama mahasiwa")
+
+        if (inputDataName == "andi") {
+            alert('Mahasiswa tersebut terdaftar')
+
+
+        } else {
+            inputDataNameFailed()
+        }
+
+        const inputNilai = prompt(`masukan nilai Andi Permadi`)
+
+        const lulus = (inputNilai == 100) && (inputDataName == "andi")
+
+        if (lulus == true) {
+            alert(`Mahasiswa dengan nama Andi permadi dinyatakan LULUS dengan nilai ${inputNilai}`)
+        } else {
+            if (lulus == false) alert(`Mahasiswa dengan nama Andi Permadi dinyatakan TIDAK LULUS dengan nilai ${inputNilai}`)
+        }
+
+
+        function inputDataNameFailed() {
+            let fail = prompt('nama mahasiswa tersebut tidak terdaftar, Harap masukan kembali')
+
+            if (fail == "andi") {
+                alert('Mahasiswa tersebut terdaftar')
+            } else {
+                return inputDataNameFailed()
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

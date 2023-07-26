@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="button" onclick="clickMe()" onmouseover="dontClick()" onmouseout="mouseOut()"> Click Me</button>
+
+    <script>
+        const button = document.getElementById('button')
+        const body = document.body
+        const h1 = document.createElement("h1")
+
+        const textButton = "click Me"
+
+        function clickMe() {
+
+            h1.innerHTML = "Terimakasih Udah di klik"
+            body.append(h1)
+        }
+
+        function dontClick() {
+            button.innerHTML = "Jangan Di klik"
+        }
+
+        function mouseOut() {
+            button.innerHTML = textButton
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: black;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+  }
+  
+.content {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.intro {
+    font-size: 70px;
+    color: white;
+}
+
+.black {
+  width: 340px;
+  height: 340px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 100%;
+  border: 23px solid white;
+  margin: auto;
+  position: absolute;
+}
+
+
+.green {
+  width: 300px;
+  height: 300px;
+  background-color: green;
+  border-radius: 100%;
+  border: 10px solid rgb(139, 209, 139);
+  margin: auto;
+  
+}
+
+
+  .clockDigital{
+    background: rgb(219, 219, 219);
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: solid black 1px;
+    display: grid;
+    margin: auto;
+    grid-template-areas: 
+    "top top"
+    "date date"
+    "mid mid"
+    "bot bot";
+    grid-template-rows: 0.5fr 0.1fr 1fr 0.3fr;
+  }
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ background:rgb(139, 209, 139);
+  grid-area: date;
+  font-size: 15px;
+  width: 90%;
+  margin: auto;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border: 1px solid black;
+}
+
+.clock {
+  width: 100%;
+  grid-area: top;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.hours {
+  margin-left: 40px;
+}
+
+.hours , .minutes, .titik {
+  height: 30px;
+  width:35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.seconds {
+  width: 30px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  margin-left: 19px;
+  margin-bottom: 6px;
+}
+
+
+
+.mid {
+  grid-area: mid;
+  background: url("assets/gifbg1.gif");
+  background-size: cover;
+}
+
+.bot {
+  background-color: rgb(139, 209, 139);
+  grid-area: bot;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+  
+  
+  canvas {
+    width: 100%;
+    height: 100vh;
+  }

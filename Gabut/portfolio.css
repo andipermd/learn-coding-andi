@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: white;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.back {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+
+.back:hover{
+    border: solid 2px rgb(214, 214, 214);
+    border-radius:100%;
+    transition: 1s;
+}
+
+.back a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: black;
+    text-decoration: none;
+    font-size: 50px;
+    left: 0;
+}
+
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'main main aside'
+    'footer footer footer';
+    grid-template-columns: 1fr 1fr 0.5fr;
+    column-gap: 50px;
+}
+
+.header {
+    width: 100%;
+    height: 300px;
+    background-image: url('assets/bg\ kontur\ \(2\).jpg');
+    grid-area: header;
+    color: white;
+}
+
+.intro {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro h1 {
+    font-size: 40px;
+}
+
+.intro button {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(248, 193, 91);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main {
+    grid-area: main;
+    text-align: justify;
+}
+
+.content1 h2 {
+    text-transform: uppercase;
+    color: rgb(248, 193, 91);
+    margin-top: 20px;
+}
+
+.picture1 {
+    width: 500px;
+    height: 350px;
+    margin: 20px auto;
+    background-image: url('assets/peta\ desa.png');
+    background-size: cover;
+}
+
+.titlePeta1 {
+    font-weight: bold;
+}
+
+.picture2 {
+    width: 500px;
+    height: 350px;
+    margin: 50px auto;
+    background-image: url('assets/peta\ kematian\ covid.png');
+    background-size: cover;
+}
+
+.titlePeta2 {
+    font-weight: bold;
+}
+
+.aside {
+    grid-area: aside;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.textAside {
+    font-size: 15px;
+    margin: 70px auto;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.pictureAside1 {
+    width: 100%;
+    height: 130px;
+    background-image:url("assets/Windrose\ Citeko\ Meteorological\ Station.png") ;
+    background-size: cover;
+    background-position: center;
+    border: solid 1px black;
+}
+
+.titleAside {
+    color: rgb(248, 193, 91);
+}
+
+.pictureAside2 {
+    margin-top: 20px;
+    width: 100%;
+    height: 130px;
+    background-image:url("assets/bg\ jasa\ web.png") ;
+    background-size: cover;
+    background-position: center;
+}
+
+.titleAside2 {
+    color: rgb(248, 193, 91);
+}
+
+@media (max-width: 767px){
+    .container {
+        width: 100%;
+        min-height: fit-content;
+        grid-template-areas: 
+        'header'
+        'main'
+        'aside';
+      grid-template-columns: 1fr;
+        
+    }
+
+    .header {
+        width: 100%;
+        height: 70px;
+        text-align: center;
+        font-size: 10px;
+        margin: auto;
+        position: fixed;
+
+    }
+    .intro p {
+        display: none;
+    }
+
+    .intro button {
+        display: none;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+    }
+
+    .main {
+        margin: 60px 20px 0px 20px;
+    }
+
+
+    .content1 h2 {
+        font-size: 20px;
+    }
+
+    .picture1, .picture2 {
+        width: 100%;
+        height: 200px;
+    }
+
+    .containerAside {
+        grid-area: aside;
+        min-height: fit-content;
+        height: 130vh;
+    }
+    .aside {
+        margin: 0px 20px;
+        font-size: 15px;
+    }
+
+    .pictureAside1, .pictureAside2 {
+        width: 100%;
+        height: 200px;
+    }
+
+    .back {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+    }
+
+    .back a {
+        height: 35px;
+        width: 30px;
+        color: white;
+        font-size: 25px;
+        background-color: blue;
+        border-radius: 100%;
+        text-align: center;
+        position: fixed;
+        display: none;
+    }
+}
+
+@media (min-width: 767px) and (max-width :1023px) {
+    .container {
+        width: 90%;
+    }
+}
