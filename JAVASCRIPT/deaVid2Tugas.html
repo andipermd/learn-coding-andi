@@ -8,29 +8,27 @@
 </head>
 
 <body>
-
-    <button id="button" onclick="clickMe()" onmouseover="dontClick()" onmouseout="mouseOut()"> Click Me</button>
+    <button id="btn2" onmouseover="showText()" onmouseout="showColor()">Klik Saya 2</button>
 
     <script>
-        const button = document.getElementById('button')
         const body = document.body
-        const h1 = document.createElement("h1")
+        const btn2 = document.querySelector("#btn2")
 
-        const textButton = "click Me"
+        const h1 = document.createElement('h1')
+        h1.innerHTML = "Andi Permadi"
 
-        function clickMe() {
+        function showText() {
 
-            h1.innerHTML = "Terimakasih Udah di klik"
             body.append(h1)
+
         }
 
-        function dontClick() {
-            button.innerHTML = "Jangan Di klik"
+        function showColor() {
+            h1.style.color = "red"
+
         }
 
-        function mouseOut() {
-            button.innerHTML = textButton
-        }
+
 
     </script>
 </body>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar object</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1> OBJECT javascript</h1>
+        <p>
+            1. object lebih sakti dari pada array
+            <br>
+            2. jika memahami object bisa memahami javascript
+        </p>
+    </div>
+
+
+</body>
+<script>
+    // membuat objek literal 
+
+    // const mhs = {
+    //     // properti
+    //     nama: 'Andi permadi',
+    //     umur: 19,
+    //     univ: 'Universitas Negeri Jakarta',
+    //     uang: 0,
+    //     // properti
+
+    //     // membuat objek didalam objek
+    //     alamat: {
+    //         jalan: 'perintis kemerdekaan',
+    //         kota: 'jakarta utara',
+    //         rt: '03',
+    //         rw: '06',
+    //     },
+
+
+    //     // method
+    //     saku: function (nominal) {
+    //         this.uang = this.uang + nominal
+    //         // console.log(`mahasiswa ${this.nama} mempunyai uang ${this.uang}`)
+    //         return mhs.uang
+    //     }
+
+    // }
+
+    // membuat objek use function declaration
+    // function Mahasiswa(nama, uang) {
+    //     // buat variabel objeknya
+    //     let mahasiswa = {}
+    //     // properti
+    //     mahasiswa.nama = nama;
+    //     mahasiswa.uang = uang;
+    //     // method
+    //     mahasiswa.saku = function (uangSaku) {
+    //         this.uang += uangSaku
+    //         return mahasiswa.uang
+    //     }
+
+    //     mahasiswa.makan = function (uangMakan) {
+    //         this.uang -= uangMakan
+    //         return mahasiswa;
+    //     }
+
+
+
+    //     // harus return objeknya
+    //     return mahasiswa;
+
+
+    // }
+
+    // let andi = Mahasiswa("andi", 0)
+    // let jamal = Mahasiswa("jamal", 12500)
+
+
+    // membuat objek use Constructor
+    function Mahasiswa(nama, uang) {
+        this.nama = nama
+        this.uang = uang
+
+
+        this.saku = function (uangSaku) {
+            this.uang += uangSaku
+            return `uang andi sekarang adalah Rp${this.uang}`
+        }
+
+        this.makan = function (uangMakan) {
+            if (this.uang != 0) {
+                this.uang -= uangMakan
+            } else {
+                console.log("andi gapunya uang")
+            }
+
+
+            return `uang andi sekarang adalah Rp${this.uang}`
+        }
+    }
+
+    // instansiasi
+    const andi = new Mahasiswa("andi", 0)
+
+
+    // const mhs3 = new Mahasiswa('nabila', 19, 'unj')
+</script>
+
+</html>

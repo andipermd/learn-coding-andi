@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // tugas 
+
+        const bentuk = {
+            nama: "lingkaran",
+            rumus: function luasLingkaran(p, r) {
+                return p * (r * r)
+            },
+
+
+        }
+
+        // 1. membuat perhitungan matematika
+
+        const pilih = prompt("mau hitung luas apa ? lingkaran, segitiga, persegi panjang, jajar genjang")
+
+        if (pilih == bentuk.nama) {
+
+            const jari = parseInt(prompt("masukan angka jari-jari nya"))
+
+            bentuk.rumus(3.14 * (jari * jari))
+
+            alert(`Luas lingkaran = 3.14 X ( ${jari} x ${jari} ) = ${bentuk.rumus(3.14, jari)} `)
+        }
+
+        // if (pilih == "lingkaran") {
+        //     const luasLingkaran = (p, r) => {
+        //         return p * (r * r)
+        //     }
+
+        //     const jari = parseInt(prompt("masukan angka jari-jari nya"))
+        //     alert(`Luas lingkaran = 3.14 X ( ${jari} x ${jari} ) = ${luasLingkaran(3.14, jari)} `)
+
+        // } else if (pilih == "segitiga"){
+        //     const luasSegitiga = (p , a , t) => {
+        //         return p * a * t
+        //     }
+
+        //     const alas = prompt
+        // }
+
+
+
+
+
+            // - luas segitiga
+            // - luas persegi panjang
+            // - luas jajargenjang
+
+            // 2. menghitung total gaji yang didapat dalam satu bulan dengan input minimal :
+            // - nama karyawan
+            // - gaji perhari
+            // - jumlah hari masuk kerja
+
+    </script>
+</body>
+
+</html>

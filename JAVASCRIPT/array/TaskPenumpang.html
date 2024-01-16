@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // create array for accomodate a value  of passengers
+        // enter the value in passenger array
+
+
+        const passengers = []
+
+        input()
+
+        function input() {
+            const inputName = prompt("Masukan nama penumpang, klik batal jika tidak ingin ambil penumpang dan jika angkot penuh")
+
+            if (inputName) {
+                // jika input di isi, dan oke
+                const doubleName = passengers.includes(inputName)
+                if (doubleName) {
+                    alert(`nama ${inputName} ini sudah ada`)
+                    console.log(passengers)
+                    return input()
+                } else {
+                    const add = passengers.push(inputName)
+                    slotAngkot()
+                    if (add) {
+                        informationPassengers()
+                        return input()
+                    }
+                }
+            } else {
+                return penumpangTurun()
+            }
+
+        }
+
+        function penumpangTurun() {
+            const penumpangTurun = setInterval(function () {
+                const penumpang = passengers.shift()
+
+                if (penumpang != undefined) {
+                    console.log(`penumpang dengan nama ${penumpang} telah turun`)
+                }
+
+
+                informationPassengers()
+                if (passengers.length == 0) {
+                    clearInterval(penumpangTurun)
+                    console.log("sudah tidak ada penumpang")
+                }
+
+            }, 15000)
+
+        }
+
+        function slotAngkot() {
+            if (passengers.length > 5) {
+                {
+                    passengers.pop()
+                    alert("angkot ini sudah penuh")
+
+                    alert("silahkan tunggu penumpang turun dengan klik batal")
+                    return slotAngkot()
+
+                }
+            }
+        }
+
+        function informationPassengers() {
+            console.log(passengers)
+            console.log(`jumlah penumpang sekarang yaitu ${passengers.length} : ${passengers.map((value) => value).join(" - ")}`)
+        }
+
+    </script>
+</body>
+
+</html>

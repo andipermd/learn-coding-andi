@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const penumpang = []
+        console.log(penumpang)
+        const tambahPenumpang = function (namaPenumpang, penumpang) {
+            if (penumpang.length == 0) {
+                const masuk = penumpang.push(namaPenumpang)
+                console.log(penumpang)
+                return penumpang
+
+            } else {
+                // telusuri seluruh kursi
+                for (let i = 0; i < penumpang.length; i++) {
+                    // jika ada kursi kosong
+                    if (penumpang[i] == undefined) {
+                        penumpang[i] = namaPenumpang
+                        return penumpang
+                    }
+
+                    // jika namanya sama
+
+                    else if (penumpang[i] == namaPenumpang) {
+                        return penumpang
+                    }
+
+
+                    // jika seluruh kursi terisi
+                    else if (i == penumpang.length - 1) {
+                        penumpang.push(namaPenumpang)
+                        return penumpang
+                    }
+
+
+                }
+            }
+        }
+
+        const hapusPenumpang = function (namaPenumpangTurun, penumpang) {
+            // jika angkkot kosong
+            if (penumpang.length == 0) {
+                console.log("angkot ini kosong !!")
+
+            } else {
+
+                const cek = penumpang.includes(namaPenumpangTurun)
+
+                if (cek) {
+                    penumpang[penumpang.indexOf(namaPenumpangTurun)] = undefined
+                }
+
+
+
+
+            }
+
+            return penumpang
+
+
+
+
+
+
+
+
+
+
+
+
+            // for (let i = 0; i < penumpang.length; i++) {
+            //     if (penumpang[i] == namaPenumpangTurun) {
+            //         penumpang[i] = undefined
+
+            //         return penumpang
+            //     } else {
+            //         console.log("nama tersebut tidak ada di angkot")
+            //         return penumpang
+            //     }
+            // }
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

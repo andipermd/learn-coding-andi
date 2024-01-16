@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // MENGETAHUI NILAI DARI SEBUAH ARRAY
+        // includes() dan indexof()
+        // indexof(), nilai sebelum - , nilai sesudah +
+
+        let arraySaya = ["A", "B", "C", "D"]
+
+
+        const nilaiD = arraySaya.includes("D")
+        if (nilaiD) {
+            console.log("saya memiliki nilai D")
+        } else {
+            console.log(`Nilai saya adalah ${arraySaya}`)
+            console.log("saya tidak memiliki nilai D")
+        }
+
+        const nilaiA = arraySaya.includes("A")
+        const position = arraySaya.indexOf("A")
+        if (nilaiA) {
+
+            console.log(`nilai saya berada di indeks ke -  ${position}`)
+        }
+
+        const B = arraySaya.indexOf("B")
+        console.log(`nilai B berada di indeks ke - ${B}`)
+
+        const indexBefore = arraySaya[B - 1]
+        const indexAfter = arraySaya[B + 1]
+
+        console.log(`nilai sebelum B adalah ${indexBefore} dan nilai sesudah B adalah ${indexAfter}`)
+
+        arraySaya.shift()
+        alert(arraySaya)
+
+
+
+    </script>
+</body>
+
+</html>

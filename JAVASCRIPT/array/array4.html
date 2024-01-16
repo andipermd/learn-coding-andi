@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // membuat array seperti dibawah
+        const nilai = []
+        nilai["A"] = "100"
+        nilai["B"] = "80"
+        nilai["C"] = "70"
+        nilai["D"] = "60"
+
+        // harus di panggil seperti ini 
+        console.log(nilai["A"])
+
+
+        // menduplikat array tanpa merubah array yang orginal
+
+        // menggunakan spread operator const newMyArr = [...myArr]
+
+        const myArr = ["A", "B", "C"] // ori
+
+        const newMyArr = [...myArr] // kw
+        newMyArr[0] = '100'
+        newMyArr[1] = '80'
+        newMyArr[2] = '70'
+
+        console.log(myArr)
+        console.log(newMyArr)
+
+        // array multidimensi atau aray dalam array
+
+        const arrayMulti = ["andi", "permadi", 20, ["jakarta", "kelapa gading"], {
+
+            nama: function () {
+                console.log("anggur")
+            }
+            ,
+            buah: function () {
+                console.log("ini buah")
+            }
+        }]
+
+        const lastArr = arrayMulti.pop()
+
+        lastArr.buah()
+        lastArr.nama()
+
+        // console.log(arrayMulti[3][1])
+
+
+
+
+    </script>
+</body>
+
+</html>

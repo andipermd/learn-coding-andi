@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const datasMahasiswa = [
+            {
+                name: "Andi",
+                job: "Web Developer",
+                age: "20",
+            }
+            ,
+            {
+                name: "desy",
+                job: "Kartographer",
+                age: "19",
+            }
+            ,
+            {
+                name: "Zaki",
+                job: "Backend Developer",
+                age: "25",
+            }
+            ,
+            {
+                name: "Sai",
+                job: "Digital Marketing",
+                age: "18",
+            }
+
+        ]
+        alert("berikut merupakan program untuk cek apakah mahasiswa terdaftar")
+        checkName()
+
+        function checkName() {
+            const name = datasMahasiswa.map((values) => values.name)
+            const input = prompt("masukkan nama mahasiswa")
+            const output = name.includes(`${input}`)
+
+            if (output) {
+                const displayData = datasMahasiswa[name.indexOf(`${input}`)]
+                alert(`Nama : ${displayData.name}, Pekerjaan : ${displayData.job} , Umur : ${displayData.age}`)
+            } else {
+                alert("mahasiswa tersebut tidak terdaftar")
+                return checkName()
+            }
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

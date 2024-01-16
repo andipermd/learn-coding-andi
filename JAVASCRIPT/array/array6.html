@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // mengambil value dari data
+
+        const datas = [
+            {
+                name: "Andi",
+                job: "Web Developer",
+                age: "20",
+            }
+            ,
+            {
+                name: "desy",
+                job: "Kartographer",
+                age: "19",
+            }
+            ,
+            {
+                name: "Zaki",
+                job: "Backend Developer",
+                age: "25",
+            }
+            ,
+            {
+                name: "Sai",
+                job: "Digital Marketing",
+                age: "18",
+            }
+
+        ]
+        // sesuai template map
+        // datas.map((values, index) => {
+
+        //     // mau ambil data apa
+        //     console.log((index + 1), values.name, values.job,)
+        // })
+
+        // munculkan data sesuai urutan usia
+        // datas.sort((a, b) => a.age - b.age).map((values, index) => console.log(values))
+
+        // munculkan data hanya yang berumur dibawah 20, dan urutkan dari umur terkecil
+
+        datas.sort((a, b) => b.age - a.age).filter((x) => x.age < 20).map((values) => console.log(values))
+    </script>
+</body>
+
+</html>
