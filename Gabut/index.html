@@ -1,383 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Andi Permadi WebSite</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaquery.css" />
+    <!-- REMIXICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css"
+      crossorigin=""
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <title>Document</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    <!-- SWIPPER CSS -->
+    <link rel="stylesheet" href="assets/swiper/swiper-bundle.min.css" />
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            color: black;
-        }
-
-        body::-webkit-scrollbar {
-            display: none;
-        }
-
-        .container {
-            width: 90%;
-            margin: auto;
-        }
-
-        nav {
-            top: 0;
-            left: 0;
-            z-index: 1;
-            width: 100%;
-            position: fixed;
-            background-color: white;
-            border-bottom: 0.1px rgb(240, 240, 240) solid;
-            padding: 20px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        nav h1 {
-            letter-spacing: -3px;
-        }
-
-        nav .fa-house {
-            display: none;
-        }
-
-        nav .menu {
-            display: flex;
-            list-style: none;
-        }
-
-        nav .hamburger {
-            display: none;
-        }
-
-        nav .menu a {
-            text-decoration: none;
-            color: black;
-            margin-right: 20px;
-            font-size: 15px;
-            opacity: 0.6;
-        }
-
-        nav .menu a:hover {
-            opacity: 1;
-            text-decoration: underline;
-            text-underline-offset: 10px;
-            transition: 0.5s;
-        }
-
-        nav .socialIcon i {
-            font-size: 20px;
-            margin-left: 8px;
-            position: relative;
-        }
-
-        nav .socialIcon i:hover {
-            color: green;
-            transition: 1s;
-            scale: 1.3;
-        }
-
-        header {
-            display: block;
-            margin-top: 140px;
-        }
-
-        header .img {
-            width: 280px;
-            height: 280px;
-            margin: auto;
-            background-image: url("assets/DSC_4138-removebg-preview.png");
-            background-size: cover;
-            border-radius: 100%;
-            margin-top: 50px;
-        }
-
-        .intro {
-            margin-top: -110px;
-            font-weight: 600;
-            font-size: 175px;
-            opacity: 0.85;
-            text-align: center;
-            text-transform: capitalize;
-            text-shadow: 6px -10px rgb(211, 210, 210);
-            height: 210px;
-        }
-
-        header p {
-            font-size: 55px;
-            text-align: center;
-            font-weight: 300;
-        }
-
-        header p span {
-            font-weight: bold;
-        }
-
-        .gallery {
-            display: grid;
-            width: 80%;
-            margin: 50px auto;
-            grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-            justify-items: center;
-        }
-
-        .gallery a {
-            text-decoration: none;
-            color: white;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* zoom background */
-        .parent {
-            overflow: hidden;
-            width: 225px;
-            height: 190px;
-            background-color: black;
-        }
-
-        /* zoom bg */
-
-        .about {
-            width: 100%;
-            height: 100%;
-            background-image: url("assets/aboutImg.jpg");
-            cursor: pointer;
-            transform: scale(1);
-            transition: all 0.5s;
-        }
-
-
-        .parent:hover .about {
-
-            transition: 0.5s;
-            transform: scale(1.5);
-        }
-
-        .portfolio {
-            width: 230px;
-            height: 190px;
-            background-image: url('assets/bg4.jpeg');
-            background-size: cover;
-            cursor: pointer;
-            transition: all 0.5s;
-        }
-
-        .parent:hover .portfolio {
-            transition: 0.5s;
-            transform: scale(1.5);
-        }
-
-        .contact {
-            width: 225px;
-            height: 190px;
-            background-image: url("assets/bg1.jpeg");
-            background-size: cover;
-            cursor: pointer;
-            transition: all 0.5s;
-        }
-
-        .parent:hover .contact {
-            transition: 0.5s;
-            transform: scale(1.5);
-        }
-
-        .blog {
-            cursor: pointer;
-            width: 225px;
-            height: 190px;
-            background-image: url('assets/bg3.jpeg');
-            background-size: cover;
-            transition: all 0.5s;
-        }
-
-        .parent:hover .blog {
-            transition: 0.5s;
-            transform: scale(1.5);
-        }
-
-        .gallery h2 {
-            height: 100%;
-            font-size: 20px;
-            font-weight: 400;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .introFooter {
-            text-align: center;
-            text-transform: uppercase;
-            color: grey;
-            font-weight: 600;
-        }
-
-        .listFooter {
-            height: 100vh;
-            width: 60%;
-            margin: auto;
-            list-style: none;
-        }
-
-        .listFooter li {
-            display: flex;
-            width: 100%;
-            height: 100px;
-            border-bottom: 0.3px rgb(240, 240, 240) solid;
-            cursor: pointer;
-        }
-
-        .digitalClock:hover h2 {
-            background-image: url(assets/Screenshot\ \(83\).png);
-            background-size: contain;
-        }
-
-        /* .listFooter li:hover h2 {
-            background-image: url('assets/nalfi6.jpeg');
-
-        } */
-
-
-
-
-
-        .listFooter li h2 {
-            width: 90px;
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 5rem;
-            font-size: 35px;
-        }
-
-        .listFooter p {
-            font-size: 25px;
-            font-weight: 600;
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-    <link rel="stylesheet" href="mediaquery.css">
     <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/ea9cfcb961.js" crossorigin="anonymous"></script>
-    <!-- last font awesome -->
+    <script
+      src="https://kit.fontawesome.com/ea9cfcb961.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-</head>
-
-<body>
-    <section id="landingPage">
-
-    </section>
+  <body>
+    <section id="landingPage"></section>
     <div class="container">
-        <section id="landingPage">
-            <nav>
-                <div class="hamburger">
-                    <input type="checkbox" name="" id="">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+      <section id="landingPage">
+        <nav>
+          <div class="hamburger">
+            <input type="checkbox" name="" id="" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
 
-                <h1>𝓐𝓷𝓭𝓲 𝓟𝓮𝓻𝓶𝓪𝓭𝓲 </h1>
-                <a href="#"><i class="fas fa-house"></i></a>
-                <ul class="menu">
-                    <li><a href="#landingPage">Home</a></li>
-                    <li><a href="http://127.0.0.1:5500/Gabut/about.html">About</a></li>
-                    <li><a href="http://127.0.0.1:5500/Gabut/portfolio.html">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+          <!-- <img class="mylogo" src="assets/mylogo1.png" alt="andipermd logo"> -->
+          <h1>andiper<span>md.</span></h1>
 
-                <ul class="socialIcon">
-                    <a href="https://web.facebook.com/lppocid/" target="_blank"><i
-                            class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://www.instagram.com/andipermd/" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@andipermdi" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-                </ul>
-
-            </nav>
-
-            <header>
-                <div class="img"></div>
-                <h1 class="intro">Hi.</h1>
-                <p class="top">I am Andi Permadi</p>
-                <p class="geo">I am <span>geographer</span> </p>
-            </header>
-        </section>
-
-
-        <main class="gallery">
-            <div class="parent">
-                <div class="about">
-                    <a href="http://127.0.0.1:5500/Gabut/about.html">About Me</a>
-                </div>
-            </div>
-
-            <div class="parent">
-                <div class="portfolio">
-                    <a href="http://127.0.0.1:5500/Gabut/portfolio.html">Portfolio</a>
-                </div>
-            </div>
-
-            <div class="parent">
-                <div class="contact">
-                    <a href="#">Contact</a>
-                </div>
-            </div>
-
-            <div class="parent">
-                <div class="blog">
-                    <a href="#">Blog</a>
-                </div>
-            </div>
-        </main>
-        <span class="introFooter">
-            <p>Hal gabut lainnya</p>
-            <br>
-        </span>
-
-        <ul class="listFooter">
-            <li class="digitalClock" onclick="digitalClock()">
-                <h2>01</h2>
-                <p>Digital Clock By @andipermd</p>
-            </li>
+          <a href="#landingPage"><i class="fas fa-house"></i></a>
+          <ul class="menu">
+            <li><a href="http://127.0.0.1:5500/Gabut/index.html#landingPage" onclick="window.location.reload(true)">Home</a></li>
+            <li><a href="#mainContent">About</a></li>
             <li>
-                <h2>01</h2>
-                <p>Coming Soon</p>
+              <a href="http://127.0.0.1:5500/Gabut/portfolio.html">Portfolio</a>
             </li>
-            <li>
-                <h2>01</h2>
-                <p>Coming Soon</p>
-            </li>
-            <li>
-                <h2>01</h2>
-                <p>Coming Soon</p>
-            </li>
-        </ul>
+            <li><a href="#">Contact</a></li>
+          </ul>
 
+          <ul class="socialIcon">
+            <a href="https://web.facebook.com/lppocid/" target="_blank"
+              ><i class="fa-brands fa-square-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/andipermd/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.tiktok.com/@andipermdi" target="_blank"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+          </ul>
+        </nav>
+
+        <header>
+          <div class="img"></div>
+          <h1 class="intro">Hi.</h1>
+          <p class="top">I am Andi Permadi</p>
+          <p class="geo">I am <span>geographer</span></p>
+        </header>
+      </section>
+
+      <main class="gallery">
+        <div class="parent">
+          <div class="about">
+            <a href="#mainContent">About Me</a>
+          </div>
+        </div>
+
+        <div class="parent">
+          <div class="portfolio">
+            <a href="#mainContent">Portfolio</a>
+          </div>
+        </div>
+
+        <div class="parent">
+          <div class="contact">
+            <a href="#mainContent">Contact</a>
+          </div>
+        </div>
+
+        <div class="parent">
+          <div class="blog">
+            <a href="#mainContent">Blog</a>
+          </div>
+        </div>
+      </main>
+
+      <div id="mainContent" class="displayNone">
+        <div class="aboutContent">
+          <h1>Everything About Me</h1>
+          <div class="aboutWrapper">
+            <div class="card1">
+              <div class="image">
+                <div class="card1Img"></div>
+              </div>
+              <div class="textImage">
+                <p class="introContent">Lorem ipsum dolor sit amet.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Illum dicta recusandae repellendus sint soluta sapiente nobis
+                  error architecto, officiis nam? Dicta laudantium dolore
+                  perspiciatis consequuntur, rem eligendi voluptates ipsa
+                  adipisci.
+                </p>
+              </div>
+            </div>
+            <div class="card2">
+              <div class="textImage">
+                <p class="introContent">Lorem ipsum dolor sit amet.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Illum dicta recusandae repellendus sint soluta sapiente nobis
+                  error architecto, officiis nam? Dicta laudantium dolore
+                  perspiciatis consequuntur, rem eligendi voluptates ipsa
+                  adipisci.
+                </p>
+              </div>
+              <div class="image">
+                <div class="card2Img"></div>
+              </div>
+            </div>
+            <div class="card3">
+              <div class="image">
+                <div class="card3Img"></div>
+              </div>
+              <div class="textImage">
+                <p class="introContent">Lorem ipsum dolor sit amet.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Illum dicta recusandae repellendus sint soluta sapiente nobis
+                  error architecto, officiis nam? Dicta laudantium dolore
+                  perspiciatis consequuntur, rem eligendi voluptates ipsa
+                  adipisci.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="vidioAboutWrapper">
+            <div class="vidioAbout">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/yCrfCOhG-Tk?si=6KEEEWJfSC7JorRf"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="portfolioContent displayNone">
+          <div class="heroImage">
+            <div class="heroContent">
+              <h1>PORTFOLIO</h1>
+              <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Assumenda, minima.
+              </h1>
+             <a href="#mainContent">See More</a>
+            </div>
+          </div>
+          <div class="detailContent">
+            <div class="porto">
+              <h1 class="title">Lorem ipsum dolor sit amet - LOREM</h1>
+              <p>Lorem ipsum dolor sit.</p>
+              <div class="imagePorto">
+                <img src="assets/bg kontur (2).jpg" alt="" />
+              </div>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
+                quaerat numquam facilis accusantium dignissimos non neque
+                temporibus vero ex placeat dolor amet minus maxime repellat ea a
+                at deserunt quia obcaecati explicabo rem, hic in? Quam odit
+                accusamus quaerat ducimus, at error voluptas sequi reiciendis
+                dolorem incidunt libero laudantium. Ipsam vitae amet tenetur cum
+                corrupti maxime eius et aliquam non!
+              </p>
+              <div class="buttonPorto">
+                <button>CONTINUE READING</button>
+              </div>
+              <ul class="footerPorto">
+                <li>
+                  <a href="#">COMMENT</a>
+                </li>
+                <li class="sideFooter">
+                  <a href="#"><i class="ri-heart-fill"></i>LIKE</a>
+                  <a href="#"><i class="ri-facebook-fill"></i>SHARE</a>
+                  <a href="#"><i class="ri-instagram-fill"></i>REPOST</a>
+                  <a href="#"><i class="ri-twitter-fill"></i>TWEET</a>
+                </li>
+              </ul>
+            </div>
+            <div class="porto">
+              <h1 class="title">Lorem ipsum dolor sit amet - LOREM</h1>
+              <p>Lorem ipsum dolor sit.</p>
+              <div class="imagePorto">
+                <img src="assets/bgPort.jpg" alt="" srcset="" />
+              </div>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
+                quaerat numquam facilis accusantium dignissimos non neque
+                temporibus vero ex placeat dolor amet minus maxime repellat ea a
+                at deserunt quia obcaecati explicabo rem, hic in? Quam odit
+                accusamus quaerat ducimus, at error voluptas sequi reiciendis
+                dolorem incidunt libero laudantium. Ipsam vitae amet tenetur cum
+                corrupti maxime eius et aliquam non!
+              </p>
+              <div class="buttonPorto">
+                <button>CONTINUE READING</button>
+              </div>
+              <ul class="footerPorto">
+                <li>
+                  <a href="#">COMMENT</a>
+                </li>
+                <li class="sideFooter">
+                  <a href="#"><i class="ri-heart-fill"></i>LIKE</a>
+                  <a href="#"><i class="ri-facebook-fill"></i>SHARE</a>
+                  <a href="#"><i class="ri-instagram-fill"></i>REPOST</a>
+                  <a href="#"><i class="ri-twitter-fill"></i>TWEET</a>
+                </li>
+              </ul>
+            </div>
+            <div class="porto">
+              <h1 class="title">Lorem ipsum dolor sit amet - LOREM</h1>
+              <p>Lorem ipsum dolor sit.</p>
+              <div class="imagePorto"></div>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
+                quaerat numquam facilis accusantium dignissimos non neque
+                temporibus vero ex placeat dolor amet minus maxime repellat ea a
+                at deserunt quia obcaecati explicabo rem, hic in? Quam odit
+                accusamus quaerat ducimus, at error voluptas sequi reiciendis
+                dolorem incidunt libero laudantium. Ipsam vitae amet tenetur cum
+                corrupti maxime eius et aliquam non!
+              </p>
+              <div class="buttonPorto">
+                <button>CONTINUE READING</button>
+              </div>
+              <ul class="footerPorto">
+                <li>
+                  <a href="#">COMMENT</a>
+                </li>
+                <li class="sideFooter">
+                  <a href="#"><i class="ri-heart-fill"></i>LIKE</a>
+                  <a href="#"><i class="ri-facebook-fill"></i>SHARE</a>
+                  <a href="#"><i class="ri-instagram-fill"></i>REPOST</a>
+                  <a href="#"><i class="ri-twitter-fill"></i>TWEET</a>
+                </li>
+              </ul>
+            </div>
+            <div class="porto">
+              <h1 class="title">Lorem ipsum dolor sit amet - LOREM</h1>
+              <p>Lorem ipsum dolor sit.</p>
+              <div class="imagePorto"></div>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
+                quaerat numquam facilis accusantium dignissimos non neque
+                temporibus vero ex placeat dolor amet minus maxime repellat ea a
+                at deserunt quia obcaecati explicabo rem, hic in? Quam odit
+                accusamus quaerat ducimus, at error voluptas sequi reiciendis
+                dolorem incidunt libero laudantium. Ipsam vitae amet tenetur cum
+                corrupti maxime eius et aliquam non!
+              </p>
+              <div class="buttonPorto">
+                <button>CONTINUE READING</button>
+              </div>
+              <ul class="footerPorto">
+                <li>
+                  <a href="#">COMMENT</a>
+                </li>
+                <li class="sideFooter">
+                  <a href="#"><i class="ri-heart-fill"></i>LIKE</a>
+                  <a href="#"><i class="ri-facebook-fill"></i>SHARE</a>
+                  <a href="#"><i class="ri-instagram-fill"></i>REPOST</a>
+                  <a href="#"><i class="ri-twitter-fill"></i>TWEET</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sideContent">
+            <div class="sideImage"></div>
+          </div>
+        </div>
+        <div class="contactContent displayNone">
+            <div class="landingContact">
+                <div class="descriptionContact"></div>
+                <div class="imageContact"></div>
+            </div>
+            
+        </div>
+        <div class="blogContent displayNone">
+          <div class="containerImg">
+            <img src="assets/bgport1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW POST SLIDER -->
+
+      <section class="newpost__container">
+        <div class="card__container swiper">
+          <div class="card__content">
+            <span>New Post</span>
+            <div class="swiper-wrapper">
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img src="assets/nalfi5.jpeg" alt="image" class="card__img" />
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img src="assets/nalfi2.jpeg" alt="image" class="card__img" />
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img src="assets/nalfi3.jpeg" alt="image" class="card__img" />
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img src="assets/nalfi4.jpeg" alt="image" class="card__img" />
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next">
+            <i class="arrow-right-s-line"></i>
+          </div>
+
+          <div class="swiper-button-prev">
+            <i class="arrow-left-s-line"></i>
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <span class="introFooter">
+        <br />
+        <p>Hal gabut lainnya</p>
+        <br />
+      </span>
+
+      <ul class="listFooter">
+        <li class="digitalClock" onclick="digitalClock()">
+          <h2>01</h2>
+          <p>Digital Clock By @andipermd</p>
+        </li>
+        <li>
+          <h2>01</h2>
+          <p>Coming Soon</p>
+        </li>
+        <li>
+          <h2>01</h2>
+          <p>Coming Soon</p>
+        </li>
+        <li>
+          <h2>01</h2>
+          <p>Coming Soon</p>
+        </li>
+      </ul>
     </div>
 
+    <script src="assets/swiper/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>

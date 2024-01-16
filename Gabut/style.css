@@ -1,0 +1,611 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --first-color: #ffff;
+  --first-dark-color: #0d1821;
+  --second-dark-color: #344966;
+  --second-color-light: #b4cded;
+  --second-color: #bfcc94;
+}
+
+body {
+  background-color: var(--first-color);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+nav {
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  background-color: white;
+  border-bottom: 0.1px rgb(240, 240, 240) solid;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav img {
+  height: 70px;
+}
+
+nav h1 {
+  color: black;
+  letter-spacing: 2px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+nav h1 span {
+  color: rgb(0, 255, 0);
+}
+
+nav .fa-house {
+  display: none;
+}
+
+nav .menu {
+  display: flex;
+  list-style: none;
+}
+
+nav .hamburger {
+  display: none;
+}
+
+nav .menu a {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+  font-size: 15px;
+  opacity: 0.6;
+}
+
+nav .menu a:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  transition: 0.5s;
+}
+
+nav .socialIcon i {
+  color: rgb(0, 255, 0);
+  font-size: 20px;
+  margin-left: 8px;
+  position: relative;
+}
+
+nav .socialIcon i:hover {
+  color: green;
+  transition: 1s;
+  scale: 1.3;
+}
+
+header {
+  display: block;
+  margin-top: 140px;
+}
+
+header .img {
+  width: 280px;
+  height: 280px;
+  margin: auto;
+  background-image: url("assets/DSC_4138-removebg-preview.png");
+  background-size: cover;
+  border-radius: 100%;
+  margin-top: 50px;
+}
+
+.intro {
+  margin-top: -110px;
+  font-weight: 600;
+  font-size: 175px;
+  opacity: 0.85;
+  text-align: center;
+  text-transform: capitalize;
+  text-shadow: 6px -10px rgb(211, 210, 210);
+  height: 210px;
+}
+
+header p {
+  font-size: 55px;
+  text-align: center;
+  font-weight: 300;
+}
+
+header p span {
+  font-weight: bold;
+}
+
+.gallery {
+  display: grid;
+  width: 80%;
+  margin: 50px auto;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  justify-items: center;
+}
+
+.gallery a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* zoom background */
+.parent {
+  overflow: hidden;
+  width: 225px;
+  height: 190px;
+  background-color: black;
+}
+
+/* zoom bg */
+
+.about {
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/aboutImg.jpg");
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.parent:hover .about {
+  transition: 0.5s;
+  transform: scale(1.5);
+}
+
+.portfolio {
+  width: 230px;
+  height: 190px;
+  background-image: url("assets/bg4.jpeg");
+  background-size: cover;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.parent:hover .portfolio {
+  transition: 0.5s;
+  transform: scale(1.5);
+}
+
+.contact {
+  width: 225px;
+  height: 190px;
+  background-image: url("assets/bg1.jpeg");
+  background-size: cover;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.parent:hover .contact {
+  transition: 0.5s;
+  transform: scale(1.5);
+}
+
+.blog {
+  cursor: pointer;
+  width: 225px;
+  height: 190px;
+  background-image: url("assets/bg3.jpeg");
+  background-size: cover;
+  transition: all 0.5s;
+}
+
+.parent:hover .blog {
+  transition: 0.5s;
+  transform: scale(1.5);
+}
+
+.gallery h2 {
+  height: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mainContent {
+  height: fit-content;
+  width: 100%;
+  padding-bottom: 1px;
+  margin-bottom: 20px;
+}
+
+/* isi fitur About*/
+.aboutContent {
+  width: 100%;
+  text-align: center;
+}
+
+.aboutContent h1 {
+  padding-top: 30px;
+  color: rgb(0, 65, 19);
+}
+
+.aboutWrapper {
+  width: 80%;
+  min-height: 500px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 15px;
+}
+
+.image {
+  width: 100%;
+  height: 50%;
+}
+
+.card1,
+.card2,
+.card3 {
+  box-shadow: 5px 5px 7px grey;
+  background-color: white;
+}
+
+.card1Img {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/nalfi1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card2Img {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/nalfi3.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card3Img {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/profile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.textImage {
+  width: 100%;
+  height: 50%;
+  background-color: rgb(221, 221, 221);
+}
+
+.introContent {
+  font-weight: bold;
+}
+
+.textImage p {
+  font-size: 13px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* vidio di about */
+
+.vidioAboutWrapper {
+  width: 100%;
+  height: fit-content;
+}
+
+.vidioAbout {
+  width: 600px;
+  height: 338px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+/* isi fitur portfolio */
+
+.portfolioContent {
+  margin: auto;
+  width: 90%;
+  height: fit-content;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main main aside";
+  grid-template-columns: 1fr 1fr 0.8fr;
+}
+
+.heroImage {
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url(assets/bgport1.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: header;
+}
+
+.heroContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--first-color);
+  row-gap: 3px;
+}
+
+.heroContent h1 {
+  letter-spacing: 2px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.heroContent h3 {
+  width: 50%;
+  text-align: center;
+  font-weight: 400;
+  color: #dddddd;
+}
+
+.heroContent a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: black;
+  padding: 10px 50px;
+  border-radius: 5px;
+  background-color: var(--second-color);
+}
+
+.heroContent a:hover {
+  transition: 0.5s;
+  background-color: greenyellow;
+  color: green;
+}
+
+.detailContent {
+  grid-area: main;
+}
+
+.porto {
+  width: 90%;
+  margin: auto;
+}
+
+.title {
+  padding-top: 30px;
+  font-size: 25px;
+}
+
+.porto p {
+  padding-bottom: 30px;
+}
+
+.imagePorto {
+  width: 100%;
+  height: 400px;
+  background: rgb(221, 221, 221);
+}
+
+.imagePorto img {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+.description {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  text-align: justify;
+  height: fit-content;
+}
+
+.buttonPorto {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.buttonPorto button {
+  padding: 10px 20px 10px 20px;
+  background: var(--first-color);
+}
+
+.footerPorto {
+  margin-top: 30px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  border-bottom: solid 1px grey;
+}
+
+.footerPorto li a {
+  text-decoration: none;
+}
+
+.footerPorto i {
+  font-size: 20px;
+
+  padding-right: 15px;
+}
+
+.sideFooter a {
+  margin-right: 10px;
+}
+
+.sideContent {
+  grid-area: aside;
+}
+
+.sideImage {
+  margin-top: 30px;
+  width: 90%;
+  height: 200px;
+  background-image: url(assets/nalfi7.jpeg);
+  background-size: cover;
+}
+
+/* isi fitur contact content*/
+.landingContact {
+  height: 100vh;
+  width: 100%;
+  background-color: blue;
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+}
+
+.descriptionContact {
+  height: 100%;
+  grid-area: left;
+  background-color: red;
+}
+
+.imageContact {
+  height: 100%;
+  grid-area: right;
+  background-color: fuchsia;
+}
+
+/*=============== image slider di halaman utama ===============*/
+.newpost__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  height: 394px;
+  margin: auto;
+}
+
+.card__container {
+  /* yang mengikuti button next */
+  /* parent inti */
+  width: 100%;
+  height: 100%;
+}
+
+.card__content {
+  width: 90%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+.card__content span {
+  position: absolute;
+  z-index: 2;
+  margin-left: 60px;
+  padding: 20px;
+  font-weight: 700;
+  color: greenyellow;
+}
+
+.card__article {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__img {
+  border-radius: 20px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.blogContent {
+  height: 100vh;
+  width: 100%;
+  background-color: green;
+}
+
+.containerImg {
+  width: 95%;
+  height: 90%;
+  margin: auto;
+}
+
+.displayOn {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}
+
+.introFooter {
+  text-align: center;
+  text-transform: uppercase;
+  color: grey;
+  font-weight: 600;
+}
+
+.listFooter {
+  height: 100vh;
+  width: 60%;
+  margin: auto;
+  list-style: none;
+}
+
+.listFooter li {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  border-bottom: 0.3px rgb(240, 240, 240) solid;
+  cursor: pointer;
+}
+
+/* .listFooter li:hover h2 {
+            background-image: url('assets/nalfi6.jpeg');
+
+        } */
+
+.listFooter li h2 {
+  width: 90px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5rem;
+  font-size: 35px;
+}
+
+.listFooter p {
+  font-size: 25px;
+  font-weight: 600;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
